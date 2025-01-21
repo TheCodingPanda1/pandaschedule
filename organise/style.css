@@ -5,19 +5,19 @@
   position: absolute;
   left: 0px;
   top: 0px;
+  border: 1px solid gray;
 }
 #main {
   position: absolute;
   left: 0px;
-  top: 50px;
+  top: 52px;
   bottom: 0px;
   right: 50px;
   background: var(--background);
-  border-top: 1px solid gray;
 }
 #controls {
   right: 0px;
-  top: 51px;
+  top: 52px;
   bottom: 0px;
   width: 50px;
   background: var(--inactive);
