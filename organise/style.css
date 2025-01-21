@@ -1,23 +1,26 @@
 #files {
-    background: var(--inactive);
-    width: calc(100% - 50px);
-    height: 50px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+  background: var(--inactive);
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 #main {
-    position: absolute;
-    left: 0px;
-    top: 50px;
-    bottom: 0px;
-    right: 50px;
-    background: var(--background);
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  bottom: 0px;
+  right: 50px;
+  background: var(--background);
+  border-top: 1px solid gray;
 }
 #controls {
   right: 0px;
-  top: 0px;
+  top: 51px;
   bottom: 0px;
   width: 50px;
-  background: var(--text);
+  background: var(--inactive);
+  border-left: 1px solid gray;
+  position: absolute;
 }
