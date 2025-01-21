@@ -1,0 +1,16 @@
+#files {
+    background: var(--inactive);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#main {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    bottom: 0px;
+    right: 50px;
+    background: var(--background);
+}
