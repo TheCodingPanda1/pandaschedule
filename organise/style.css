@@ -30,8 +30,24 @@
 .file {
   width: var(--filewidth);
   height: 100%;
-  display: inline-block;
+  display: inline-bl;
   background: var(--inactive);
   border: 1px solid gray;
   margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+  margin-top: -1px;
+  margin-right: -5px;
+  cursor: pointer;
+}
+.file input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: var(--filewidth);
+  height: 100%;
+  position: absolute;
+}
+.file:has(input:checked){
+  background: var(--background);
 }
