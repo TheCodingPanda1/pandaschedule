@@ -1,6 +1,6 @@
 #files {
     background: var(--inactive);
-    width: 100%;
+    width: calc(100% - 50px);
     height: 50px;
     position: absolute;
     left: 0px;
@@ -13,4 +13,11 @@
     bottom: 0px;
     right: 50px;
     background: var(--background);
+}
+#controls {
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 50px;
+  background: var(--text);
 }
