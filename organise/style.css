@@ -1,3 +1,6 @@
+:root {
+  --filewidth: 100px;
+}
 #files {
   background: var(--inactive);
   width: 100%;
@@ -23,4 +26,12 @@
   background: var(--inactive);
   border-left: 1px solid gray;
   position: absolute;
+}
+.file {
+  width: var(--filewidth);
+  height: 100%;
+  display: inline-block;
+  background: var(--inactive);
+  border: 1px solid gray;
+  margin: 0px;
 }
