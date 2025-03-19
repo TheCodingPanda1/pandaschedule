@@ -1,36 +1,8 @@
 :root {
-    --background: rgb(250, 250, 250);
-    --inactive: lightgray;
-    --text: rgb(25, 25, 25);
-}
-body {
-    position: absolute;
-    background: var(--background);
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    color: var(--text);
-}
-select {
-    width: 70px;
-    height: 25px;
-    text-align: center;
-    padding-right: 20px;
-    cursor: pointer;
-    background: var(--inactive);
-    color: var(--text);
-}
-select::before {
-    content: "V";
-    color: black;
-    float: right;
-}
-#ok {
-    background: var(--inactive);
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-    color: var(--text);
+  --background: rgb(200, 200, 200);
+  --pannel: rgb(175, 175, 175);
+  --tabs: rgb(150, 150, 150);
+  --text: rgb(25, 25, 25);
+  --active-pannel: rgb(200, 200, 200);
+  --active-tabs: rgb(175, 175, 175);
 }
