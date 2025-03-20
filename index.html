@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <title>Hello world!</title>
-
-    <!-- import the webpage's stylesheet -->
+    <title>Welcome to Panda Schedule!</title>
     <link rel="stylesheet" href="/style.css" />
-
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <link rel="icon" href="https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/Drawing.sketchpad%20(3).png?v=1737441466749"/>
   </head>
-  <body></body>
+  <body>
+    <div id = "main">
+      <div id = "top-bar">
+        <a href = "panda-schedule.glitch.me">Panda Schedule</a>
+      </div>
+      <div id = "tabs">
+        <div id = "slider"></div>
+        <div class = "tab">
+          <p>Day View</p>
+          <input type="radio" name = "tabs" checked>
+        </div>
+        <div class = "tab">
+          <p>Week View</p>
+          <input type="radio" name = "tabs">
+        </div>
+      </div>
+    </div>
+    <div id = "bottom-pannel"></div>
+    <div id = "panda"></div>
+  </body>
 </html>

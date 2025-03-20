@@ -1,1 +1,0 @@
-location.href = "https://panda-schedule.glitch.me/welcome/";
