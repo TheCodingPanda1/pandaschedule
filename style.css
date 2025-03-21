@@ -6,6 +6,7 @@
   --hovered-pannel: rgb(200, 200, 200);
   --hovered-tabs: rgb(175, 175, 175);
   --active-tabs: rgb(175, 175, 175);
+  --tab-width: 50%;
 }
 #top-bar {
   position: absolute;
@@ -19,17 +20,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px black;
 }
 #top-bar a{
   text-decoration: none;
   color: var(--text);
 }
-#tabs {
-  width: 100%;
-  height: 50px;
-  background: var(--tabs);
+#slider {
   position: absolute;
   left: 0px;
   top: 50px;
+  width: var(--tab-width);
+  height: 5px;
+  background: skyblue;
+  transition: 0.5s;
+}
+#tab input {
+  width: var(--tab-width);
+  height: 50px;
+  background: var(--tabs);
 }
