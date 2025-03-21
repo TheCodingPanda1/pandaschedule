@@ -63,7 +63,7 @@
   top: 50px;
 }
 .tab:has(input:checked) {
-  background-image: l
+  background-image: linear-gradiant(var(--active-tabs), var(--background));
 }
 .tab:hover {
   background: var(--hovered-tabs);
