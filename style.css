@@ -6,6 +6,7 @@
   --hovered-pannel: rgb(200, 200, 200);
   --hovered-tabs: rgb(175, 175, 175);
   --active-tabs: linear-gradient(var(--hovered-tabs), var(--background));
+  --slider: rgb(0, 0, 255);
   --shadows: rgb(100, 100, 100);
 }
 #top-bar {
@@ -84,7 +85,7 @@
   top: 50px;
   width: var(--tab-width);
   height: 5px;
-  background: skyblue;
+  background: var(--slider);
   transition: 0.5s;
 }
 body {
