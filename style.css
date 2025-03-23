@@ -55,12 +55,6 @@
   left: 0px;
   top: 50px;
 }
-.tab:has(input:checked) {
-  background-image: var(--active-tabs);
-}
-.tab:hover {
-  background: var(--hovered-tabs);
-}
 .tab-selected {
   position: absolute;
   left: 0px;
@@ -70,6 +64,12 @@
   opacity: 0%;
   transition: 0.5s;
   width: 100%;
+}
+.tab:has(input:checked) div {
+  opacity: 100%;
+}
+.tab:hover {
+  background: var(--hovered-tabs);
 }
 .tab p {
   position: relative;
