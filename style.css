@@ -5,7 +5,7 @@
   --text: rgb(25, 25, 25);
   --hovered-pannel: rgb(200, 200, 200);
   --hovered-tabs: rgb(175, 175, 175);
-  --active-tabs: linear-gradient(orange, red);
+  --active-tabs: linear-gradient(var(--hovered-tabs), var(--background));
 }
 #top-bar {
   position: absolute;
@@ -84,4 +84,7 @@
   height: 5px;
   background: skyblue;
   transition: 0.5s;
+}
+body {
+  bac
 }
