@@ -19,7 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px black;
 }
 #top-bar a {
   text-decoration: none;
@@ -33,6 +32,7 @@
   transition: 0.5s;
   width: var(--tab-width);
   text-align: center;
+  box-shadow: inset 0 0 15px gray;
 }
 .tab input {
   appearance: none;
@@ -46,6 +46,7 @@
   left: 0px;
   top: 0px;
   cursor: pointer;
+  border: none;
 }
 #tabs {
   position: absolute;
@@ -60,7 +61,7 @@
   left: 0px;
   top: 0px;
   background-image: var(--active-tabs);
-  height: 50px;
+  height: 51px;
   opacity: 0%;
   transition: 0.5s;
   width: 100%;
@@ -86,5 +87,5 @@
   transition: 0.5s;
 }
 body {
-  bac
+  background: var(--background);
 }
