@@ -25,15 +25,6 @@
   text-decoration: none;
   color: var(--text);
 }
-#slider {
-  position: absolute;
-  left: 0px;
-  top: 50px;
-  width: var(--tab-width);
-  height: 5px;
-  background: skyblue;
-  transition: 0.5s;
-}
 .tab {
   margin: 0px;
   position: absolute;
@@ -76,4 +67,21 @@
   top: 0px;
   background-image: var(--active-tabs);
   height: 50px;
+  opacity: 0%;
+  transition: 0.5s;
+  width: 100%;
+}
+.tab p {
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+#slider {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  width: var(--tab-width);
+  height: 5px;
+  background: skyblue;
+  transition: 0.5s;
 }
