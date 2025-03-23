@@ -91,5 +91,10 @@ body {
   background: var(--background);
 }
 #main {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  width: 100%;
+  height: 100%;
   
 }
