@@ -6,6 +6,7 @@
   --hovered-pannel: rgb(200, 200, 200);
   --hovered-tabs: rgb(175, 175, 175);
   --active-tabs: linear-gradient(var(--hovered-tabs), var(--background));
+  --shadows: rgb(100, 100, 100);
 }
 #top-bar {
   position: absolute;
@@ -32,7 +33,7 @@
   transition: 0.5s;
   width: var(--tab-width);
   text-align: center;
-  box-shadow: inset 0 0 15px gray;
+  box-shadow: inset 0 0 10px var(--shadows);
 }
 .tab input {
   appearance: none;
@@ -88,4 +89,7 @@
 }
 body {
   background: var(--background);
+}
+#main {
+  
 }
