@@ -5,8 +5,7 @@
   --text: rgb(25, 25, 25);
   --hovered-pannel: rgb(200, 200, 200);
   --hovered-tabs: rgb(175, 175, 175);
-  --active-tabs: rgb(175, 175, 175);
-  --tab-width: 50%;
+  --active-tabs: linear-gradient(orange, red);
 }
 #top-bar {
   position: absolute;
@@ -53,6 +52,9 @@
   width: 100%;
   height: 50px;
   background: transparent;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
 }
 #tabs {
   position: absolute;
@@ -63,8 +65,15 @@
   top: 50px;
 }
 .tab:has(input:checked) {
-  background-image: linear-gradiant(var(--active-tabs), var(--background));
+  background-image: var(--active-tabs);
 }
 .tab:hover {
   background: var(--hovered-tabs);
+}
+.tab-selected {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: var(--active-tabs);
+  height: 50px;
 }
