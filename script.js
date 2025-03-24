@@ -48,11 +48,11 @@ window.addEventListener("resize", function(){
     });
   }
 });
-setInterval(function(){
+var changeTab = function(){
   var tabWidth = window.innerWidth / tabs.length;
   if(main.scrollLeft / window.innerWidth == Math.round(main.scrollLeft / window.innerWidth)){
     var amount = main.scrollLeft / window.innerWidth;
     tabs[amount].getElementsByTagName("input")[0].checked = true;
-    slider.style.left = amount * tabWidth;
+    slider.style.left = amount * tabWidth + "px";
   }
-}, 1000/60)
+};
