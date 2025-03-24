@@ -1,7 +1,8 @@
 var tabs = document.getElementsByClassName("tab");
+var main = document.getElementById("main");
 var root = document.documentElement;
 var slider = document.getElementById("slider");
-var screens = document.getElementById("main").getElementsByTagName("div");
+var screens = main.getElementsByTagName("div");
 for(var i = 0; i < screens.length; i ++){
   screens[i].style.left = i * window.innerWidth + "px";
 }
@@ -48,9 +49,10 @@ window.addEventListener("resize", function(){
   }
 });
 setInterval(function(){
-  if(window.scrollX / window.innerWidth == Math.round(window.scrollX / window.innerWidth)){
-    var amount = window.scrollX / window.innerWidth - 1;
+  console.log(main.scrollX);
+  if(main.scrollLeft / main.innerWidth == Math.round(main.scrollLeft / main.innerWidth)){
+    var amount = main.scrollLeft / window.innerWidth;
     tabs[amount].getElementsByTagName("input")[0].checked = true;
-    console.log("yay!");
+    console.log(main.scrollLeft);
   }
 }, 1000/60)
