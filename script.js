@@ -49,10 +49,10 @@ window.addEventListener("resize", function(){
   }
 });
 setInterval(function(){
-  console.log(main.scrollX);
-  if(main.scrollLeft / main.innerWidth == Math.round(main.scrollLeft / main.innerWidth)){
+  var tabWidth = window.innerWidth / tabs.length;
+  if(main.scrollLeft / window.innerWidth == Math.round(main.scrollLeft / window.innerWidth)){
     var amount = main.scrollLeft / window.innerWidth;
     tabs[amount].getElementsByTagName("input")[0].checked = true;
-    console.log(main.scrollLeft);
+    slider.style.left = amount * tabWidth;
   }
 }, 1000/60)
