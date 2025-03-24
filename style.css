@@ -101,6 +101,8 @@ body {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   transition: 0.25s;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 #main div {
   position: absolute;
@@ -108,4 +110,7 @@ body {
   width: 100%;
   height: 100%;
   scroll-snap-align: start;
+}
+#main::-webkit-scrollbar {
+  display: none;
 }
