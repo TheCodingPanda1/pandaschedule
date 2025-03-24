@@ -47,4 +47,10 @@ window.addEventListener("resize", function(){
     });
   }
 });
-setInterval(function(){})
+setInterval(function(){
+  if(window.scrollX / window.innerWidth == Math.round(window.scrollX / window.innerWidth)){
+    var amount = window.scrollX / window.innerWidth - 1;
+    tabs[amount].getElementsByTagName("input")[0].checked = true;
+    console.log("yay!");
+  }
+}, 1000/60)
