@@ -1,6 +1,10 @@
 var tabs = document.getElementsByClassName("tab");
 var root = document.documentElement;
 var slider = document.getElementById("slider");
+var screens = document.getElementById("main").getElementsByTagName("div");
+for(var i = 0; i < screens.length; i ++){
+  screens[i].style.left = i * window.innerWidth + "px";
+}
 for(var i = 0; i < tabs.length; i ++){
   var tabWidth = window.innerWidth / tabs.length;
   tabs[i].style.left = i * tabWidth + "px";
@@ -17,6 +21,9 @@ for(var i = 0; i < tabs.length; i ++){
   });
 };
 window.addEventListener("resize", function(){
+  for(var i = 0; i < screens.length; i ++){
+    screens[i].style.left = i * window.innerWidth + "px";
+  }
   var tabWidth = window.innerWidth / tabs.length;
   for(var j = 0; j < tabs.length; j ++){
     var tab = tabs[j];
@@ -39,8 +46,5 @@ window.addEventListener("resize", function(){
       }
     });
   }
-})
-var screens = document.getElementById("main").getElementsByTagName("div");
-for(var i = 0; i < screens.length; i ++){
-  screens[i].style.left = i * window.innerWidth + "px";
-}
+});
+setInterval(function(){})
