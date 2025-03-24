@@ -17,6 +17,7 @@ for(var i = 0; i < tabs.length; i ++){
       if(tabInput.checked){
         slider.style.left = tab.style.left;
         console.log(tab.style.left);
+        main.scrollLeft = j * window.innerWidth;
       }
     }
   });
@@ -43,6 +44,7 @@ window.addEventListener("resize", function(){
         if(tabInput.checked){
           slider.style.left = tab.style.left;
           console.log(tab.style.left);
+          main.scrollLeft = j * window.innerWidth;
         }
       }
     });
