@@ -14,10 +14,11 @@ for(var i = 0; i < tabs.length; i ++){
     for(var j = 0; j < tabs.length; j ++){
       var tab = tabs[j];
       var tabInput = tab.getElementsByTagName("input")[0];
+      var stopInterval;
       if(tabInput.checked){
         slider.style.left = tab.style.left;
         console.log(tab.style.left);
-        main.scrollLeft = j * window.innerWidth;
+        main.scrollLeft += (window.innerWidth * j - main.scrollLeft) / 2;
       }
     }
   });
@@ -45,6 +46,7 @@ window.addEventListener("resize", function(){
           slider.style.left = tab.style.left;
           console.log(tab.style.left);
           main.scrollLeft = j * window.innerWidth;
+          main.scrollLeft += (window.innerWidth * j - main.scrollLeft) / 2;
         }
       }
     });
