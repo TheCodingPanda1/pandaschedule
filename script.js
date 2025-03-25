@@ -14,11 +14,20 @@ for(var i = 0; i < tabs.length; i ++){
     for(var j = 0; j < tabs.length; j ++){
       var tab = tabs[j];
       var tabInput = tab.getElementsByTagName("input")[0];
+      var interval;
       if(tabInput.checked){
+        interval = setInterval(tabRepeat);
+      }
+      var tabRepeat = function(){
         slider.style.left = tab.style.left;
         console.log(tab.style.left);
-        main.scrollLeft += (window.innerWidth * j - main.scrollLeft) / 2;
+        var amount = (window.innerWidth * j - main.scrollLeft) / 2;
+        main.scrollLeft += amount;
+        main.style.scrollSnapType = "none";
         console.log((window.innerWidth * j - main.scrollLeft) / 2);
+        if(main.scrollLeft == window.innerWidth * j){
+          clearInterval(interval);
+        }
       }
     }
   });
@@ -45,7 +54,7 @@ window.addEventListener("resize", function(){
         if(tabInput.checked){
           slider.style.left = tab.style.left;
           console.log(tab.style.left);
-          main.scrollLeft = j * window.innerWidth;
+          main.style.scrollSnapType = "none";
           main.scrollLeft += (window.innerWidth * j - main.scrollLeft) / 2;
         }
       }
