@@ -21,12 +21,13 @@ for(var i = 0; i < tabs.length; i ++){
       var tabRepeat = function(){
         slider.style.left = tab.style.left;
         console.log(tab.style.left);
-        var amount = (window.innerWidth * j - main.scrollLeft) / 2;
+        var amount = Math.round((window.innerWidth * j - main.scrollLeft) / 2);
         main.scrollLeft += amount;
         main.style.scrollSnapType = "none";
-        console.log((window.innerWidth * j - main.scrollLeft) / 2);
+        console.log((window.innerWidth * j - main.scrollLeft) / 2 + 1);
         if(main.scrollLeft == window.innerWidth * j){
           clearInterval(interval);
+          console.log("yay!");
         }
       }
     }
