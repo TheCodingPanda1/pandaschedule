@@ -16,6 +16,7 @@ for(var i = 0; i < tabs.length; i ++){
       var tabInput = tab.getElementsByTagName("input")[0];
       var interval;
       if(tabInput.checked){
+        slider.style.left = tab.style.left;
         window.scroll({
           top: 0,
           left: window.innerWidth * j,
