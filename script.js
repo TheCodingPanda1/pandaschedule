@@ -67,3 +67,4 @@ var changeTab = function(){
     slider.style.left = amount * tabWidth + "px";
   }
 };
+
