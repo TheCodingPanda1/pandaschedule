@@ -25,7 +25,7 @@ for(var i = 0; i < tabs.length; i ++){
         main.scrollLeft += amount;
         main.style.scrollSnapType = "none";
         console.log((window.innerWidth * j - main.scrollLeft) / 2 + 1);
-        if(main.scrollLeft == window.innerWidth * j){
+        if(amount == window.innerWidth * j){
           clearInterval(interval);
           console.log("yay!");
         }
