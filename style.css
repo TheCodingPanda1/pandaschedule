@@ -93,6 +93,7 @@
 }
 body {
   background: var(--background);
+  overflow: hidden;
 }
 #main {
   position: absolute;
@@ -132,5 +133,12 @@ body {
   background: var(--hovered-pannel);
 }
 #right-bar {
-  width: 
+  width: 300px;
+  height: 100%;
+  background: var(--pannel);
+  box-shadow: 0 0 10px var(--shadows);
+  position: absolute;
+  right: -300px;
+  top: 0px;
+  transition: 0.25s;
 }

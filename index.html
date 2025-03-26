@@ -26,7 +26,7 @@
       </div>
       <div id = "top-bar">
         <a href = "https://panda-schedule.glitch.me">Panda Schedule</a>
-        <div class = "right" id = "new-tab" title = "New Tab">+</div>
+        <div class = "right" id = "new-tab" title = "New Tab" onclick = "showRightBar()">+</div>
       </div>
     </div>
     <div id = "main" onscroll="changeTab()">
@@ -35,7 +35,9 @@
       <div>There's more!</div>
     </div>
     <div id = "slider"></div>
-    <div id = "right-bar">Coming soon!</div>
+    <div id = "right-bar">
+      <input placeholder = "Tab name">
+    </div>
     <script src = "script.js" defer></script>
   </body>
 </html>

@@ -67,4 +67,7 @@ var changeTab = function(){
     slider.style.left = amount * tabWidth + "px";
   }
 };
-
+var showRightBar = function(){
+  var rightBar = document.getElementById("right-bar");
+  rightBar.style.right = "0px";
+};
