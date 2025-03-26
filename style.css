@@ -9,6 +9,7 @@
   --slider: rgb(0, 0, 255);
   --shadows: rgb(100, 100, 100);
   --borders: gray;
+  --right-width: 280px;
 }
 #top-bar {
   position: absolute;
@@ -133,19 +134,26 @@ body {
   background: var(--hovered-pannel);
 }
 #right-bar {
-  width: 300px;
+  width: var(--right-width);
+  padding: 10px;
   height: 100%;
   background: var(--pannel);
   box-shadow: 0 0 10px var(--shadows);
   position: absolute;
-  right: -300px;
+  right: calc(-20px - var(--right-width));
   top: 0px;
   transition: 0.25s;
+  display: flex;
+  justify-content: center;
 }
 #right-bar input {
-  width: calc(100% - 20px);
+  width: 100%;
   height: 50px;
-  margin: 10px;
+  margin: 0px;
   background: var(--background);
   color: var(--text);
+  text-align: center;
+  border-radius: 50px;
+  font-size: 30px;
+  font-family: serif;
 }
