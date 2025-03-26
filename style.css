@@ -20,12 +20,14 @@
   font-size: 30px;
   text-align: center;
   display: flex;
-  justify-content: center;
+  text-align: center;
   align-items: center;
 }
 #top-bar a {
   text-decoration: none;
   color: var(--text);
+  margin: auto;
+  text-align: center;
 }
 .tab {
   margin: 0px;
@@ -118,10 +120,14 @@ body {
 .right {
   width: 50px;
   height: 50px;
-  float: right;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--borders);
-  
+  background: var(--pannel);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.right:hover {
+  background: var(--hovered-pannel);
 }
