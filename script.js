@@ -17,12 +17,12 @@ for(var i = 0; i < tabs.length; i ++){
       var interval;
       if(tabInput.checked){
         slider.style.left = tab.style.left;
-        window.scroll({
+        main.scroll({
           top: 0,
           left: window.innerWidth * j,
           behavior: "smooth",
         });
-
+        console.log("yay!");
       }
     }
   })
@@ -48,9 +48,12 @@ window.addEventListener("resize", function(){
         var tabInput = tab.getElementsByTagName("input")[0];
         if(tabInput.checked){
           slider.style.left = tab.style.left;
-          console.log(tab.style.left);
-          main.style.scrollSnapType = "none";
-          main.scrollLeft += (window.innerWidth * j - main.scrollLeft) / 2;
+          main.scroll({
+            top: 0,
+            left: window.innerWidth * j,
+            behavior: "smooth",
+          });
+          console.log("yay!");
         }
       }
     });
