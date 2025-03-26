@@ -16,22 +16,15 @@ for(var i = 0; i < tabs.length; i ++){
       var tabInput = tab.getElementsByTagName("input")[0];
       var interval;
       if(tabInput.checked){
-        interval = setInterval(tabRepeat);
-      }
-      var tabRepeat = function(){
-        slider.style.left = tab.style.left;
-        console.log(tab.style.left);
-        var amount = Math.round((window.innerWidth * j - main.scrollLeft) / 2);
-        main.scrollLeft += amount;
-        main.style.scrollSnapType = "none";
-        console.log((window.innerWidth * j - main.scrollLeft) / 2 + 1);
-        if(amount == window.innerWidth * j){
-          clearInterval(interval);
-          console.log("yay!");
-        }
+        window.scroll({
+          top: 0,
+          left: window.innerWidth * j,
+          behavior: "smooth",
+        });
+
       }
     }
-  });
+  })
 };
 window.addEventListener("resize", function(){
   for(var i = 0; i < screens.length; i ++){
