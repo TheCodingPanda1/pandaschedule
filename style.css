@@ -142,3 +142,10 @@ body {
   top: 0px;
   transition: 0.25s;
 }
+#right-bar input {
+  width: calc(100% - 20px);
+  height: 50px;
+  margin: 10px;
+  background: var(--background);
+  color: var(--text);
+}
