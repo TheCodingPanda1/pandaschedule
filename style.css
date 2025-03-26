@@ -8,6 +8,7 @@
   --active-tabs: linear-gradient(var(--hovered-tabs), var(--background));
   --slider: rgb(0, 0, 255);
   --shadows: rgb(100, 100, 100);
+  --borders: gray;
 }
 #top-bar {
   position: absolute;
@@ -113,4 +114,14 @@ body {
 }
 #main::-webkit-scrollbar {
   display: none;
+}
+.right {
+  width: 50px;
+  height: 50px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--borders);
+  
 }
