@@ -159,9 +159,12 @@ body {
 }
 #right-bar input[type="number"] {
   border-radius: 0px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
   text-align: right;
   width: 50%;
-  
+  position: absolute;
+  left: 10px;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -177,7 +180,7 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: 0.5s;
   opacity: 0%;
   position: absolute;
-  left: calc(50% - 16px);
+  left: calc(100% - 16px);
 }
 input[type="number"]:hover::-webkit-outer-spin-button,
 input[type="number"]:hover::-webkit-inner-spin-button {
