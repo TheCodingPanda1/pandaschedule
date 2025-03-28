@@ -149,6 +149,7 @@ body {
   width: calc(100% - 10px);
   height: 50px;
   margin: 0px;
+  margi
   background: var(--background);
   color: var(--text);
   text-align: center;
@@ -157,4 +158,23 @@ body {
   font-family: serif;
   display: inline;
   margin: 0px;
+}
+
+/* Customizing spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Customizing spin buttons in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 2px;
 }
