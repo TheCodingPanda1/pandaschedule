@@ -149,7 +149,6 @@ body {
   width: calc(100% - 10px);
   height: 50px;
   margin: 0px;
-  margi
   background: var(--background);
   color: var(--text);
   text-align: center;
@@ -157,7 +156,6 @@ body {
   font-size: 30px;
   font-family: serif;
   display: inline;
-  margin: 0px;
 }
 
 /* Customizing spin buttons in Firefox */
@@ -170,11 +168,16 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: block;
-    width: 16px;
-    height: 16px;
-    background: #f0f0f0;
-    border: 1px solid #cccccc;
-    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: url('https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/273-2738973_greater-than-sign-less-than-sign-at-sign-removebg-preview.png?v=1743141575741') no-repeat center center;
+    background-size: contain;
+    border: none;
     cursor: pointer;
     margin: 2px;
+}
+
+/* Hide default spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
