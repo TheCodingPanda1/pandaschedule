@@ -158,26 +158,31 @@ body {
   display: inline;
 }
 
-/* Customizing spin buttons in Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
 
 /* Customizing spin buttons in Chrome, Safari, Edge, and Opera */
-input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: url('https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/273-2738973_greater-than-sign-less-than-sign-at-sign-removebg-preview.png?v=1743141575741') no-repeat center center;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    margin: 2px;
+  -webkit-appearance: none;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url('https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/273-2738973_greater-than-sign-less-than-sign-at-sign-removebg-preview.png?v=1743141575741') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  position: absolute;
 }
-
-/* Hide default spin buttons in Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: url('https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/273-2738973_greater-than-sign-less-than-sign-at-sign-removebg-preview.png?v=1743141575741') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  left: 50px;
+  rotate: 90deg;
+  display: block;
+  position: absolute;
 }
