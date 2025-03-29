@@ -12,7 +12,7 @@
   --right-width: 280px;
 }
 .select {
-  width: 50%;
+  width: calc(50% - 14px);
   height: 50px;
   background: lightgray;
   text-align: center;
@@ -23,7 +23,10 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   float: right;
-  background: var(--pannels);
+  background: var(--background);
+  border: 2px solid lightgray;
+  border-left: none;
+  border-top: 2px solid black;
 }
 .select div {
   opacity: 0%;
@@ -31,7 +34,8 @@
   width: 100%;
   height: 50px;
   pointer-events: none;
-  background: var(--pannels);
+  background: var(--background);
+  border-radius: 50px;
 }
 .select:has(div:focus) div{
   opacity: 0%;
@@ -221,8 +225,10 @@ body {
   border-top-left-radius: 50px;
   text-align: right;
   width: 50%;
+  height: 50px;
   position: absolute;
   left: 10px;
+  padding: 0px;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
