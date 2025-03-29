@@ -73,7 +73,9 @@ var showRightBar = function(){
 };
 const input = document.getElementById('number');
 input.addEventListener('input', function() {
-  console.log(event.key);
+  if(event.data != parseInt(event.data)){
+    console.log(this.value.replace(event.data, ""));
+  }
 });
 
 

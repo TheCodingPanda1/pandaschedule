@@ -67,7 +67,7 @@
   pointer-events: all;
 }
 .select div:has(input:checked){
-  background: gray;
+  background: var(--tabs);
 }
 .select::after {
   content: "";
