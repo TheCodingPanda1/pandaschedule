@@ -72,8 +72,10 @@ var showRightBar = function(){
   rightBar.style.right = "0px";
 };
 const input = document.getElementById('number');
-input.addEventListener('input', function (event) {
-  console.log(input.value); // This will capture all characters, including letters
+input.addEventListener('keydown', function (event) {
+  if(parseInt(event.key) != event.key ){
+    event.preventDefault();
+  }
 });
 
 
