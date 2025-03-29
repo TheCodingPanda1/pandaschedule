@@ -75,3 +75,34 @@ const input = document.getElementById('number');
 input.addEventListener('input', function() {
   this.value = this.value.replace(/[^0-9]/g, ''); // Removes any non-numeric characters
 });
+
+//Making the selects
+const selects = document.getElementsByClassName("select");
+
+for (let i = 0; i < selects.length; i++) {
+  selects[i].tabIndex = 0;
+  let selectDivs = selects[i].getElementsByTagName("div");
+
+  for (let j = 0; j < selectDivs.length; j++) {
+    let div = selectDivs[j];
+    div.tabIndex = 0;
+    let name = selects[i].getAttribute("name");
+
+    // Create and append input element
+    let input = document.createElement("input");
+    input.type = "radio";
+    input.setAttribute("name", name);
+    div.appendChild(input);
+
+    // Add event listener for click
+    div.addEventListener("click", function () {
+      // Update only the first child's text content
+      let firstChild = selects[i].childNodes[0];
+      if (firstChild && firstChild.nodeType === Node.TEXT_NODE) {
+        firstChild.textContent = this.innerText;
+      }
+      console.log("Selected option is:", this.innerText);
+    });
+  }
+}
+
