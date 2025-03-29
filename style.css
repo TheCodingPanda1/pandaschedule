@@ -11,6 +11,62 @@
   --borders: gray;
   --right-width: 280px;
 }
+.select div {
+  opacity: 0%;
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  background: lightgray;
+  pointer-events: none;
+}
+.select:has(div:focus) div{
+  opacity: 0%;
+  position: absolute;
+}
+.select:has(div:active) div{
+  opacity: 100%;
+  position: relative;
+}
+.select div:active {
+  pointer-events: all;
+}
+.select:focus div {
+  opacity: 100%;
+  position: relative;
+  transition: 0.25s;
+  margin-top: 0px;
+  pointer-events: all;
+}
+.select div input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin: 0px;
+  cursor: pointer;
+}
+.select div:has(input:checked){
+  background: gray;
+}
+.select::after {
+  content: "";
+  border-top: 10px solid black;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 7.5px;
+  transition: 0.25s;
+}
+.select:focus::after {
+  scale: -1;
+}
+
 #top-bar {
   position: absolute;
   left: 0px;
@@ -180,9 +236,19 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: 0.5s;
   opacity: 0%;
   position: absolute;
-  left: calc(100% - 16px);
+  left: 10px;
 }
 input[type="number"]:hover::-webkit-outer-spin-button,
 input[type="number"]:hover::-webkit-inner-spin-button {
   opacity: 100%;
+}
+.select {
+  width: 100px;
+  height: 25px;
+  background: lightgray;
+  text-align: center;
+  align-content: center;
+  line-height: 25px;
+  cursor: pointer;
+  position: relative;
 }

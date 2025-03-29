@@ -1,13 +1,11 @@
+# Panda Schedule
+
 ## What is this project?
 Panda Schedule is a schedule organiser designed to make it easier to deliver work on time.
 
-is the main HTML page for your site.
-
-← `style.css`: CSS files add styling rules to your content.
-
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+## Why was it built?
+I thought that it was too hard to organise workloads without paying, so, since I love coding, I decided to make this! It is named Panda Schedule because I am TheCodingPanda.
+If you want to view the app without the code, press [here](https://panda-schedule.glitch.me).
 
 ## You built this with Glitch!
 

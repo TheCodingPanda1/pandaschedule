@@ -71,3 +71,7 @@ var showRightBar = function(){
   var rightBar = document.getElementById("right-bar");
   rightBar.style.right = "0px";
 };
+const input = document.getElementById('number');
+input.addEventListener('input', function() {
+  this.value = this.value.replace(/[^0-9]/g, ''); // Removes any non-numeric characters
+});
