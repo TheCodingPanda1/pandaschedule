@@ -70,6 +70,7 @@ var changeTab = function(){
 var showRightBar = function(){
   var rightBar = document.getElementById("right-bar");
   rightBar.style.right = "0px";
+  rightBar.style.boxShadow = "0 0 10px var(--shadows)";
 };
 const input = document.getElementById('number');
 input.addEventListener('keydown', function (event) {

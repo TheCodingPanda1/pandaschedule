@@ -211,7 +211,6 @@ body {
   padding: 10px;
   height: 100%;
   background: var(--pannel);
-  box-shadow: 0 0 10px var(--shadows);
   position: absolute;
   right: calc(-20px - var(--right-width));
   top: 0px;
