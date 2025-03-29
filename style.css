@@ -1,5 +1,6 @@
 :root {
   --background: rgb(200, 200, 200);
+  --hovered-background: rgb(225, 225, 225);
   --pannel: rgb(175, 175, 175);
   --tabs: rgb(150, 150, 150);
   --text: rgb(25, 25, 25);
@@ -27,6 +28,10 @@
   border: 2px solid lightgray;
   border-left: none;
   border-top: 2px solid black;
+  transition: 0.25s;
+}
+.select:hover {
+  background: var(--hovered-background);
 }
 .select div {
   opacity: 0%;
@@ -34,8 +39,14 @@
   width: 100%;
   height: 50px;
   pointer-events: none;
-  background: var(--background);
+  background: var(--hovered-background);
   border-radius: 50px;
+}
+.select:focus {
+  background: var(--hovered-background);
+}
+.select div:hover {
+  background: var(--background);
 }
 .select:has(div:focus) div{
   opacity: 0%;
@@ -218,6 +229,9 @@ body {
   font-size: 30px;
   font-family: serif;
   display: inline;
+  border: 2px solid black;
+  border-bottom: 2px solid lightgray;
+  border-right: 2px solid lightgray;
 }
 #right-bar input[type="number"] {
   border-radius: 0px;
@@ -245,6 +259,7 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0%;
   position: absolute;
   left: 10px;
+  top: calc(50% - 25px);
 }
 input[type="number"]:hover::-webkit-outer-spin-button,
 input[type="number"]:hover::-webkit-inner-spin-button {
