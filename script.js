@@ -73,7 +73,7 @@ var showRightBar = function(){
 };
 const input = document.getElementById('number');
 input.addEventListener('keydown', function (event) {
-  if(parseInt(event.key) != event.key ){
+  if(parseInt(event.key) != event.key && event.key != "Backspace"){
     event.preventDefault();
   }
 });
