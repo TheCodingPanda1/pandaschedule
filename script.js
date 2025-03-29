@@ -109,6 +109,7 @@ for (let i = 0; i < selects.length; i++) {
     });
   }
 }
-if(navigator.userAgent.indexOf("safari") != -1){
+if(navigator.userAgent.indexOf("Safari") != -1){
   location.href = location.href = "https://panda-schedule.glitch.me/safari/";
+  console.log("yay!");
 }
