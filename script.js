@@ -73,10 +73,15 @@ var showRightBar = function(){
 };
 const input = document.getElementById('number');
 input.addEventListener('input', function() {
-  this.value = this.value.replace(/[^0-9]/g, ''); // Removes any non-numeric characters
+  for(var i = 0; i < this.value.length; i ++){
+    if(this.value[i].parseInt() != this.value[i]){
+      this.value = this.value.replace(this.value[i], "")
+    }
+  }
 });
 
-//Making the selects
+
+//Customising the selects
 const selects = document.getElementsByClassName("select");
 
 for (let i = 0; i < selects.length; i++) {
