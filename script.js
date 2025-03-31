@@ -114,6 +114,6 @@ if(navigator.userAgent.indexOf("Chrome") !== -1){
 } else if(navigator.userAgent.indexOf("Safari") !== -1){
   console.log("Safari!");
   if(window.Location == window.top.Location){
-    location.href = "https://panda-schedule.glitch.me/safari";
+    location.href = "https://panda-schedule.glitch.me/safari/";
   }
 }
