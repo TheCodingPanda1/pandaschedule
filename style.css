@@ -278,3 +278,6 @@ input[type="number"]:hover::-webkit-inner-spin-button {
   background: transparent;
   opacity: 0%;
 }
+#new {
+  display: none;
+}
