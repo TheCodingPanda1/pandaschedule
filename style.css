@@ -114,6 +114,7 @@
   width: var(--tab-width);
   text-align: center;
   z-index: 0;
+  clip-path: inset(0 -15px 0 -15px);
 }
 .tab input {
   appearance: none;
@@ -154,7 +155,6 @@
 }
 .tab:has(input:checked){
   z-index: 1;
-  clip-path: inset(0 0 0 0);
 }
 .tab:hover {
   background: var(--hovered-tabs);
@@ -190,6 +190,8 @@ body {
   transition: 0.25s;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  z-index: 0;
+  box-shadow: 0 0 10px var(--shadows);
 }
 #main div {
   position: absolute;
