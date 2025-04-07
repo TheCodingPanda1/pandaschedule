@@ -96,7 +96,8 @@
   display: flex;
   text-align: center;
   align-items: center;
-  box-shadow: 0 0 10px var(--shadows)
+  box-shadow: 0 0 10px var(--shadows);
+  z-index: 2;
 }
 #top-bar a {
   text-decoration: none;
@@ -112,6 +113,7 @@
   transition: 0.5s;
   width: var(--tab-width);
   text-align: center;
+  z-index: 0;
 }
 .tab input {
   appearance: none;
@@ -147,7 +149,12 @@
 }
 .tab:has(input:checked) div {
   opacity: 100%;
-  box-shadow: 10px
+  box-shadow: 0 0 10px var(--shadows);
+  z-index: 0;
+}
+.tab:has(input:checked){
+  z-index: 1;
+  clip-path: inset(0 0 0 0);
 }
 .tab:hover {
   background: var(--hovered-tabs);
@@ -165,6 +172,7 @@
   height: 5px;
   background: var(--slider);
   transition: 0.5s;
+  z-index: 3;
 }
 body {
   background: var(--background);
