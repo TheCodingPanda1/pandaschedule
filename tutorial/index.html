@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Panda Schedule!</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/04691576-823b-4f15-ae12-ec92ea17160f/Drawing.sketchpad%20(3).png?v=1737441466749"
+    />
+  </head>
+  <body>
+    <div id="pannels">
+      <div id="tabs">
+        <div class="tab">
+          <div class="tab-selected"></div>
+          <p>Day View</p>
+          <input type="radio" name="tabs" checked />
+        </div>
+        <div class="tab">
+          <div class="tab-selected"></div>
+          <p>Week View</p>
+          <input type="radio" name="tabs" />
+        </div>
+        <div class="tab">
+          <div class="tab-selected"></div>
+          <p>Month View</p> 
+          <input type="radio" name="tabs" />
+        </div>
+      </div>
+      <div id="top-bar">
+        <div class="left" id="settings"></div>
+        <a href="https://panda-schedule.glitch.me">Panda Schedule</a>
+        <div
+          class="right"
+          id="new-tab"
+          title="New Tab"
+          onclick="showRightBar()"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div id="main" onscroll="changeTab()">
+      <div>Nothing to see here!</div>
+      <div>Hello, World</div>
+      <div>There's more!</div>
+    </div>
+    <div id="slider"></div>
+    <div id="right-bar">
+      <div id="new">
+        <p>What would you like the name of your tab to be?</p>
+        <input placeholder="Tab Name" class="input" />
+        <br />
+        <br />
+        <br />
+        <div>
+          <input placeholder="Number of" id="number" type="number" />
+          <div class="select" name="select1">
+            Select:
+            <div>Days</div>
+            <div>Weeks</div>
+            <div>Months</div>
+            <div>Years</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
