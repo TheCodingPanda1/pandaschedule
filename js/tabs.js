@@ -3,35 +3,56 @@ var main = document.getElementById("main");
 var root = document.documentElement;
 var slider = document.getElementById("slider");
 var screens = main.getElementsByTagName("div");
-for(var i = 0; i < screens.length; i ++){
+var settingsButton = document.getElementById("settings");
+var settingsTab = document.getElementById("settings-tab");
+var settingsScreen = document.getElementById("settingsScreen");
+var minusAmount = 1;
+var changing = false;
+var tabWidth = window.innerWidth / (tabs.length - minusAmount);
+for (var i = 0; i < screens.length; i++) {
   screens[i].style.left = i * window.innerWidth + "px";
+  console.log(screens[i]);
 }
-for(var i = 0; i < tabs.length; i ++){
-  var tabWidth = window.innerWidth / tabs.length;
+for (var i = 0; i < tabs.length; i++) {
   tabs[i].style.left = i * tabWidth + "px";
   root.style.setProperty("--tab-width", tabWidth + "px");
-  tabs[i].addEventListener("click", function(){
-    for(var j = 0; j < tabs.length; j ++){
+  tabs[i].addEventListener("click", function () {
+    changing = true;
+    for (var j = 0; j < tabs.length; j++) {
       var tab = tabs[j];
       var tabInput = tab.getElementsByTagName("input")[0];
       var interval;
-      if(tabInput.checked){
+      var amount;
+      if (tabInput.checked) {
+        amount = window.innerWidth * j;
         slider.style.left = tab.style.left;
+        console.log(tab.style.left);
         main.scroll({
           top: 0,
           left: window.innerWidth * j,
           behavior: "smooth",
         });
-        console.log("yay!");
+        var currentJ = j;
+        console.log(j);
+        const interval = setInterval(check, 1000 / 60);
+        function check() {
+          if (main.scrollLeft == window.innerWidth * currentJ) {
+            clearInterval(interval);
+            changing = false;
+            console.log("Yay!");
+          } else {
+            console.log(main.scrollLeft + " " + window.innerWidth + " " + j);
+          }
+        }
       }
     }
-  })
-};
-window.addEventListener("resize", function(){
+  });
+}
+window.addEventListener("resize", function () {
   for(var i = 0; i < screens.length; i ++){
     screens[i].style.left = i * window.innerWidth + "px";
   }
-  var tabWidth = window.innerWidth / tabs.length;
+  var tabWidth = window.innerWidth / (tabs.length - minusAmount);
   for(var j = 0; j < tabs.length; j ++){
     var tab = tabs[j];
     var tabInput = tab.getElementsByTagName("input")[0];
@@ -59,26 +80,30 @@ window.addEventListener("resize", function(){
     });
   }
 });
-var changeTab = function(){
-  var tabWidth = window.innerWidth / tabs.length;
-  if(main.scrollLeft / window.innerWidth == Math.round(main.scrollLeft / window.innerWidth)){
+var changeTab = function () {
+  console.log(changing);
+  var tabWidth = window.innerWidth / (tabs.length - minusAmount);
+  if (
+    main.scrollLeft / window.innerWidth ==
+      Math.round(main.scrollLeft / window.innerWidth) &&
+    changing == false
+  ) {
     var amount = main.scrollLeft / window.innerWidth;
     tabs[amount].getElementsByTagName("input")[0].checked = true;
     slider.style.left = amount * tabWidth + "px";
   }
 };
-var showRightBar = function(){
+var showRightBar = function () {
   var rightBar = document.getElementById("right-bar");
   rightBar.style.right = "0px";
   rightBar.style.boxShadow = "0 0 10px var(--shadows)";
 };
-const input = document.getElementById('number');
-input.addEventListener('keydown', function (event) {
-  if(parseInt(event.key) != event.key && event.key != "Backspace"){
+const input = document.getElementById("number");
+input.addEventListener("keydown", function (event) {
+  if (parseInt(event.key) != event.key && event.key != "Backspace") {
     event.preventDefault();
   }
 });
-
 
 //Customising the selects
 const selects = document.getElementsByClassName("select");
@@ -109,11 +134,29 @@ for (let i = 0; i < selects.length; i++) {
     });
   }
 }
-if(navigator.userAgent.indexOf("Chrome") !== -1){
+if (navigator.userAgent.indexOf("Chrome") !== -1) {
   console.log("Not Safari!");
-} else if(navigator.userAgent.indexOf("Safari") !== -1){
+} else if (navigator.userAgent.indexOf("Safari") !== -1) {
   console.log("Safari!");
-  if(window.Location == window.top.Location){
+  if (window.Location == window.top.Location) {
     location.href = "https://panda-schedule.glitch.me/safari/";
   }
 }
+//The settings tab
+settingsButton.addEventListener("click", function () {
+  minusAmount = 0;
+  tabWidth = window.innerWidth / (tabs.length - minusAmount);
+  settingsTab.style.width = "var(--tab-width)";
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].style.left = tabWidth * i + "px";
+  }
+  root.style.setProperty("--tab-width", tabWidth + "px");
+  settingsTab.getElementsByTagName("input")[0].checked = true;
+  slider.style.left = "calc(100% - var(--tab-width))";
+  settingsScreen.style.display = "block";
+  main.scroll({
+    top: 0,
+    left: window.innerWidth * (tabs.length - 1),
+    behavior: "smooth",
+  });
+});
