@@ -9,8 +9,9 @@
   --active-tabs: linear-gradient(var(--hovered-tabs), var(--background));
   --slider: rgb(0, 0, 255);
   --shadows: rgb(100, 100, 100);
-  --borders: gray;
+  --borders: transparent;
   --right-width: 280px;
+  --nec-border: 1px solid rgb(175, 175, 175);
 }
 .select {
   width: calc(50% - 14px);
@@ -203,30 +204,101 @@ body {
 #main::-webkit-scrollbar {
   display: none;
 }
-.right {
+.right, .left {
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--borders);
+  border: var(--borders);
   background: var(--pannel);
   transition: 0.5s;
   cursor: pointer;
 }
-.right:hover {
+.right:hover, .left:hover {
   background: var(--hovered-pannel);
+}
+#settings div:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 2px solid var(--text);
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  scale: 0.75;
+}
+#settings div:nth-child(3), 
+#settings div:nth-child(4), 
+#settings div:nth-child(5),
+#settings div:nth-child(6),
+#settings div:nth-child(7),
+#settings div:nth-child(8),
+#settings div:nth-child(9),
+#settings div:nth-child(10) {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: block;
+  margin: 0px;
+  display: inline-block;
+  scale: 0.75;
+}
+#settings div:nth-child(3)::before, 
+#settings div:nth-child(4)::before, 
+#settings div:nth-child(5)::before,
+#settings div:nth-child(6)::before,
+#settings div:nth-child(7)::before,
+#settings div:nth-child(8)::before,
+#settings div:nth-child(9)::before,
+#settings div:nth-child(10)::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 2px solid var(--text);
+  left: 20px;
+  top: 6px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 3px solid var(--pannel)
+}
+#settings div:nth-child(3) {
+  rotate: 0deg;
+}
+#settings div:nth-child(4) {
+  rotate: 45deg;
+}
+#settings div:nth-child(5) {
+  rotate: 90deg;
+}
+#settings div:nth-child(6) {
+  rotate: 135deg;
+}
+#settings div:nth-child(7) {
+  rotate: 180deg;
+}
+#settings div:nth-child(8) {
+  rotate: 225deg;
+}
+#settings div:nth-child(9) {
+  rotate: 270deg;
+}
+#settings div:nth-child(10) {
+  rotate: 315deg;
 }
 #right-bar {
   width: var(--right-width);
   padding: 10px;
-  height: 100%;
+  height: calc(100% - 50px);
   background: var(--pannel);
   position: absolute;
   right: calc(-20px - var(--right-width));
-  top: 0px;
+  top: 50px;
   transition: 0.25s;
   text-align: center;
+  z-index: 3;
+  clip-path: inset(0 0 0 -15px);
 }
 #right-bar input {
   width: calc(100% - 10px);
@@ -290,5 +362,39 @@ input[type="number"]:hover::-webkit-inner-spin-button {
   opacity: 0%;
 }
 #new {
+  display: none;
+}
+#settingsScreen {
+  display: none;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+#settingsScreen span {
+  width: var(--settings-width);
+  height: 55px;
+  font-size: 50px;
+  margin-left: 0px;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--nec-border);
+  border-top: none;
+  border-right: none;
+  transition: 0.25s;
+}
+#settingsScreen span:hover {
+  background: var(--hovered-background);
+}
+#settings-tab {
+  width: 0px;
+  content-visibility: auto;
+}
+#settingsScreen section {
+  width: fit-content;
+}
+#settingsScreen section {
   display: none;
 }
